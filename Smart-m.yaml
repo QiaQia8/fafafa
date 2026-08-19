@@ -1,6 +1,6 @@
 proxy-providers:
   主线:
-    url: 
+    url: http://127.0.0.1:38324/download/Main?target=ClashMeta
     type: http
     interval: 3000
     health-check:
@@ -9,7 +9,7 @@ proxy-providers:
       interval: 300
     proxy: 直连
   备用:
-    url: 
+    url: http://127.0.0.1:38324/download/backup?target=ClashMeta
     type: http
     interval: 3000
     health-check:
@@ -30,8 +30,8 @@ tproxy-port: 0
 allow-lan: false
 mode: rule
 log-level: info
-external-controller: 127.0.0.1:9090
-secret: 
+external-controller: 192.168.0.230:9090
+secret: 8aWgxm0R
 dns:
   enable: true
   listen: 0.0.0.0:7874
@@ -90,6 +90,7 @@ profile:
 default:
   type: select
   proxies:
+    - 吃压力专用-主备故转
     - 台湾-故转
     - 吃压力专用-智选
     - 台湾-智选
@@ -108,6 +109,7 @@ proxy-groups:
   - name: 人工智能
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -125,6 +127,8 @@ proxy-groups:
   - name: GitHub
     type: select
     proxies:
+      - 不吃压力专用-智选
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -136,12 +140,12 @@ proxy-groups:
       - 新加坡-故转
       - 韩国-故转
       - 美国-故转
-      - 不吃压力专用-智选
       - 直连
 
   - name: Reddit
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -159,6 +163,7 @@ proxy-groups:
   - name: Telegram
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -176,6 +181,7 @@ proxy-groups:
   - name: WhatsApp
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -193,8 +199,9 @@ proxy-groups:
   - name: Facebook
     type: select
     proxies:
-      - 台湾-故转
+      - 吃压力专用-主备故转
       - 吃压力专用-智选
+      - 台湾-故转
       - 台湾-智选
       - 所有-智选
       - 所有-手选
@@ -210,6 +217,7 @@ proxy-groups:
   - name: 国外流媒体
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -227,6 +235,8 @@ proxy-groups:
   - name: BiliBili
     type: select
     proxies:
+      - 直连
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -239,11 +249,12 @@ proxy-groups:
       - 韩国-故转
       - 美国-故转
       - 不吃压力专用-智选
-      - 直连
 
   - name: YouTube
     type: select
     proxies:
+      - 不吃压力专用-智选
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -255,12 +266,12 @@ proxy-groups:
       - 新加坡-故转
       - 韩国-故转
       - 美国-故转
-      - 不吃压力专用-智选
       - 直连
 
   - name: Spotify
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -278,6 +289,8 @@ proxy-groups:
   - name: Nvidia
     type: select
     proxies:
+      - 直连
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -290,11 +303,12 @@ proxy-groups:
       - 韩国-故转
       - 美国-故转
       - 不吃压力专用-智选
-      - 直连
 
   - name: Steam
     type: select
     proxies:
+      - 直连
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -307,11 +321,13 @@ proxy-groups:
       - 韩国-故转
       - 美国-故转
       - 不吃压力专用-智选
-      - 直连
+
 
   - name: Games
     type: select
     proxies:
+      - 直连
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -324,11 +340,11 @@ proxy-groups:
       - 韩国-故转
       - 美国-故转
       - 不吃压力专用-智选
-      - 直连
 
   - name: Crypto
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -346,6 +362,8 @@ proxy-groups:
   - name: Apple
     type: select
     proxies:
+      - 直连
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -358,11 +376,11 @@ proxy-groups:
       - 韩国-故转
       - 美国-故转
       - 不吃压力专用-智选
-      - 直连
 
   - name: Google
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -380,6 +398,7 @@ proxy-groups:
   - name: Microsoft
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -397,6 +416,7 @@ proxy-groups:
   - name: Test
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -420,6 +440,7 @@ proxy-groups:
   - name: 国外
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -454,6 +475,7 @@ proxy-groups:
   - name: 其他
     type: select
     proxies:
+      - 吃压力专用-主备故转
       - 台湾-故转
       - 吃压力专用-智选
       - 台湾-智选
@@ -467,6 +489,16 @@ proxy-groups:
       - 美国-故转
       - 不吃压力专用-智选
       - 直连
+
+  - name: 吃压力专用-主备故转
+    type: fallback
+    use:
+      - 主线
+    filter: (?=.*(台湾 低时延)).*$
+    url: https://www.gstatic.com/generate_204
+    interval: 35
+    lazy: false
+    timeout: 5000
 
   - name: 吃压力专用-智选
     type: smart
